@@ -1,6 +1,10 @@
 // String Compression -- "aabcccccaaa" --> a2b1c5a3
+// One Approach is string concatenation -- This approach is not efficient because concatenation using strings is a costly operation O(n).
+//   Using this approach the complexity will be O(p + k^2); p is the size of original string, k is the number of character sequence
 
+// testing
 import java.util.*;
+
 class string_compression{
    public static void main(String args[]){
       String s = "aabccccca";
@@ -9,6 +13,7 @@ class string_compression{
       System.out.println(inplace(s1));
    }
    
+   // This approach is using StringBuilder class in java
    public static String inplace(String s){
       int cnt = 1;
       char ch = s.charAt(0);
